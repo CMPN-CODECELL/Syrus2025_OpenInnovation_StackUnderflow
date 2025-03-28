@@ -2,7 +2,6 @@ from flask import Flask, request, jsonify
 from AgenticAutogen import tax_calculation_agent, user_context_agent, tax_optimization_agent, user_proxy
 
 import openai
-from flask import Flask, jsonify
 import random
 from flask_cors import CORS
 import os
@@ -19,6 +18,7 @@ def calculate_tax():
         message=f"Calculate tax for the following data: {user_data}"
     )
     return jsonify(response)
+
 
 @app.route('/optimize_tax', methods=['POST'])
 def optimize_tax():
@@ -39,6 +39,7 @@ def fill_form():
         message=f"Assist in filling the tax return form with the following data: {user_data}"
     )
     return jsonify(response)
+
 # Set your OpenAI API key
 openai.api_key = "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"  # Replace with your actual API key
 
