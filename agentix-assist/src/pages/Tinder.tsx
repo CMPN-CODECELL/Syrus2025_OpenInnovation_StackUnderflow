@@ -28,7 +28,7 @@ function Tinder() {
   };
 
   return (
-    <div>
+    <div id="tinder">
       <h1>Tinder for Tax: Swipe to Learn</h1>
       <h2>Score: {score}</h2>
 
