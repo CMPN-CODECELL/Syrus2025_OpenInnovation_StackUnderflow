@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Reels from "./pages/Reels";
 import SistaAI from "./components/sista-ai/SistaAI";
+import Tinder from "./pages/Tinder";
 
 const queryClient = new QueryClient();
 
@@ -21,7 +22,8 @@ const App = () => (
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
 		  <Route path="reels" element={<Reels />} />
-          <Route path="/voice" element={<SistaAI />} />
+          <Route path="voice" element={<SistaAI />} />
+		  <Route path="tinder" element={<Tinder/>} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
