@@ -11,7 +11,53 @@ CORS(app)
 
 @app.route('/calculate_tax', methods=['POST'])
 def calculate_tax():
-    user_data = request.json
+    print("Helloooooooooooo")
+    user_data = {
+      "Employer": {
+        "Name": "DELOITTE SUPPORT SERVICES INDIA PRIVATE LIMITED",
+        "Address": "FLOOR 15, DELOITTE TOWER 1, SURVEY NO. 41, GACHIBOWALI VILLAGE, HYDERABAD - 500032, Telangana",
+        "TAN": "HYDD01619C",
+        "PAN": "AABCD9761D"
+      },
+      "Employee": {
+        "Name": "MOHAMMED MUBEEN",
+        "Address": "17-1-137/D/20, MUBEEN COLONY REIN BAZAR, YAKUTHPURA, HYDERABAD, HYDERABAD - 500023, Andhra Pradesh",
+        "PAN": "ATOPM4017E",
+        "Assessment Year": "2022-23",
+        "Period with Employer": {
+          "From": "01-Apr-2021",
+          "To": "31-Mar-2022"
+        }
+      },
+      "SalaryDetails": {
+        "GrossSalary": 2557983.00,
+        "Exemptions": {
+          "HouseRentAllowance": 180150.00,
+          "LeaveEncashment": 0.00,
+          "TravelAllowance": 0.00,
+          "Gratuity": 0.00
+        },
+        "TotalTaxableIncome": 2377833.00
+      },
+      "TaxDetails": {
+        "TotalTaxDeducted": 483740.00,
+        "TotalTaxDeposited": 483740.00,
+        "QuarterlyBreakup": [
+          {"Quarter": "Q1", "AmountPaid": 762578.00, "TaxDeducted": 158446.00},
+          {"Quarter": "Q2", "AmountPaid": 571506.00, "TaxDeducted": 99247.00},
+          {"Quarter": "Q3", "AmountPaid": 592463.00, "TaxDeducted": 105051.00},
+          {"Quarter": "Q4", "AmountPaid": 631436.00, "TaxDeducted": 120996.00}
+        ]
+      },
+      "InvestmentRecommendations": {
+        "EPF": "Recommended to maximize tax-free contributions",
+        "PPF": "Consider investing for long-term tax-free returns",
+        "ELSS": "Potential for high returns with 80C benefits",
+        "NPS": "Can help save additional tax under 80CCD(1B)",
+        "FDs": "Choose 5-year tax-saving FDs for deductions"
+      }
+    }
+
     # Initiate conversation with Tax Calculation Agent
     response = user_proxy.initiate_chat(
         tax_calculation_agent,
@@ -22,7 +68,51 @@ def calculate_tax():
 
 @app.route('/optimize_tax', methods=['POST'])
 def optimize_tax():
-    user_data = request.json
+    user_data = user_data = {
+      "Employer": {
+        "Name": "DELOITTE SUPPORT SERVICES INDIA PRIVATE LIMITED",
+        "Address": "FLOOR 15, DELOITTE TOWER 1, SURVEY NO. 41, GACHIBOWALI VILLAGE, HYDERABAD - 500032, Telangana",
+        "TAN": "HYDD01619C",
+        "PAN": "AABCD9761D"
+      },
+      "Employee": {
+        "Name": "MOHAMMED MUBEEN",
+        "Address": "17-1-137/D/20, MUBEEN COLONY REIN BAZAR, YAKUTHPURA, HYDERABAD, HYDERABAD - 500023, Andhra Pradesh",
+        "PAN": "ATOPM4017E",
+        "Assessment Year": "2022-23",
+        "Period with Employer": {
+          "From": "01-Apr-2021",
+          "To": "31-Mar-2022"
+        }
+      },
+      "SalaryDetails": {
+        "GrossSalary": 2557983.00,
+        "Exemptions": {
+          "HouseRentAllowance": 180150.00,
+          "LeaveEncashment": 0.00,
+          "TravelAllowance": 0.00,
+          "Gratuity": 0.00
+        },
+        "TotalTaxableIncome": 2377833.00
+      },
+      "TaxDetails": {
+        "TotalTaxDeducted": 483740.00,
+        "TotalTaxDeposited": 483740.00,
+        "QuarterlyBreakup": [
+          {"Quarter": "Q1", "AmountPaid": 762578.00, "TaxDeducted": 158446.00},
+          {"Quarter": "Q2", "AmountPaid": 571506.00, "TaxDeducted": 99247.00},
+          {"Quarter": "Q3", "AmountPaid": 592463.00, "TaxDeducted": 105051.00},
+          {"Quarter": "Q4", "AmountPaid": 631436.00, "TaxDeducted": 120996.00}
+        ]
+      },
+      "InvestmentRecommendations": {
+        "EPF": "Recommended to maximize tax-free contributions",
+        "PPF": "Consider investing for long-term tax-free returns",
+        "ELSS": "Potential for high returns with 80C benefits",
+        "NPS": "Can help save additional tax under 80CCD(1B)",
+        "FDs": "Choose 5-year tax-saving FDs for deductions"
+      }
+    }
     # Initiate conversation with Tax Optimization Agent
     response = user_proxy.initiate_chat(
         tax_optimization_agent,
@@ -32,7 +122,52 @@ def optimize_tax():
 
 @app.route('/fill_form', methods=['POST'])
 def fill_form():
-    user_data = request.json
+    print("fill formmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm")
+    user_data = {
+      "Employer": {
+        "Name": "DELOITTE SUPPORT SERVICES INDIA PRIVATE LIMITED",
+        "Address": "FLOOR 15, DELOITTE TOWER 1, SURVEY NO. 41, GACHIBOWALI VILLAGE, HYDERABAD - 500032, Telangana",
+        "TAN": "HYDD01619C",
+        "PAN": "AABCD9761D"
+      },
+      "Employee": {
+        "Name": "MOHAMMED MUBEEN",
+        "Address": "17-1-137/D/20, MUBEEN COLONY REIN BAZAR, YAKUTHPURA, HYDERABAD, HYDERABAD - 500023, Andhra Pradesh",
+        "PAN": "ATOPM4017E",
+        "Assessment Year": "2022-23",
+        "Period with Employer": {
+          "From": "01-Apr-2021",
+          "To": "31-Mar-2022"
+        }
+      },
+      "SalaryDetails": {
+        "GrossSalary": 2557983.00,
+        "Exemptions": {
+          "HouseRentAllowance": 180150.00,
+          "LeaveEncashment": 0.00,
+          "TravelAllowance": 0.00,
+          "Gratuity": 0.00
+        },
+        "TotalTaxableIncome": 2377833.00
+      },
+      "TaxDetails": {
+        "TotalTaxDeducted": 483740.00,
+        "TotalTaxDeposited": 483740.00,
+        "QuarterlyBreakup": [
+          {"Quarter": "Q1", "AmountPaid": 762578.00, "TaxDeducted": 158446.00},
+          {"Quarter": "Q2", "AmountPaid": 571506.00, "TaxDeducted": 99247.00},
+          {"Quarter": "Q3", "AmountPaid": 592463.00, "TaxDeducted": 105051.00},
+          {"Quarter": "Q4", "AmountPaid": 631436.00, "TaxDeducted": 120996.00}
+        ]
+      },
+      "InvestmentRecommendations": {
+        "EPF": "Recommended to maximize tax-free contributions",
+        "PPF": "Consider investing for long-term tax-free returns",
+        "ELSS": "Potential for high returns with 80C benefits",
+        "NPS": "Can help save additional tax under 80CCD(1B)",
+        "FDs": "Choose 5-year tax-saving FDs for deductions"
+      }
+    }
     # Initiate conversation with User Context Agent
     response = user_proxy.initiate_chat(
         user_context_agent,
