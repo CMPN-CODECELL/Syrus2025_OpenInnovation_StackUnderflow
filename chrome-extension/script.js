@@ -1,27 +1,3 @@
-// async function fetchData() {
-//   const apiUrl = "https://api.npoint.io/b8284c9a519839726fa1";
-
-//   try {
-//     const res = await fetch(apiUrl);
-//     const record = await res.json();
-
-//     document.getElementById("userId").innerHTML = record.userId;
-//     document.getElementById("id").innerHTML = record.id;
-//     document.getElementById("title").innerHTML = record.title;
-//     document.getElementById("completed").innerHTML = record.completed;
-//   } catch (error) {
-//     console.error("Error fetching data:", error);
-//     document.getElementById("userId").innerHTML = "Error";
-//     document.getElementById("id").innerHTML = "";
-//     document.getElementById("title").innerHTML = "";
-//     document.getElementById("completed").innerHTML = "";
-//   }
-// }
-
-// fetchData();
-
-
-
 // document.addEventListener("DOMContentLoaded", () => {
 //   document.getElementById("fetchData").addEventListener("click", fetchData);
 // });
@@ -106,6 +82,10 @@
 //   }
 //   return value;
 // }
+
+
+
+
 
 
 
