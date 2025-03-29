@@ -1,6 +1,7 @@
 
 import { Button } from '@/components/ui/button';
 import { ArrowRight, BrainCircuit } from 'lucide-react';
+import TaxAIChatbot from './ui/chatBot';
 
 const Hero = () => {
   return (
@@ -31,10 +32,10 @@ const Hero = () => {
                   </div>
                 ))}
               </div>
-              <p>Join 10,000+ users who trust TaxAI</p>
+              <p>Join 10,000+ users who trust ITYaar</p>
             </div>
           </div>
-          <div className="relative">
+          {/* <div className="relative">
             <div className="absolute -top-20 -right-20 w-64 h-64 bg-taxblue-100 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-pulse-soft"></div>
             <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-taxgreen-100 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-pulse-soft"></div>
             <div className="relative bg-white rounded-2xl shadow-xl p-6 border border-gray-100 animate-float">
@@ -69,7 +70,8 @@ const Hero = () => {
                 </Button>
               </div>
             </div>
-          </div>
+          </div> */}
+          <TaxAIChatbot/>
         </div>
       </div>
     </div>
