@@ -15,13 +15,6 @@ llm_config = {
 "max_tokens": 1000
 }
 
-
-# tax_calculation_agent = AssistantAgent(
-#     name="TaxCalculator",
-#     llm_config=llm_config,
-#     system_message="You are an expert in calculating income tax based on predefined Indian tax regimes."
-# )
-
 tax_calculation_agent = AssistantAgent(
     name="TaxCalculator",
     llm_config=llm_config,
@@ -76,6 +69,12 @@ tax_optimization_agent = AssistantAgent(
     name="TaxOptimizer",
     llm_config=llm_config,
     system_message="You provide tax-saving strategies based on Indian tax laws."
+)
+
+tax_validation_agent = AssistantAgent(
+    name="TaxValidator",
+    llm_config=llm_config,
+    system_message="You validate tax calculations and ensure compliance with Indian tax laws."
 )
 
 user_proxy = UserProxyAgent(
