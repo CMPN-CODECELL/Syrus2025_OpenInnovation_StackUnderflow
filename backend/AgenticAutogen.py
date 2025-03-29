@@ -6,7 +6,7 @@ load_dotenv()
 
 
 OPENAI_API_KEY = os.getenv("GPT_API_KEY")
-print(OPENAI_API_KEY)
+# print(OPENAI_API_KEY)
 
 llm_config = {
 "model": "gpt-3.5-turbo",
