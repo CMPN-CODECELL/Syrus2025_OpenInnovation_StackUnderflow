@@ -9,7 +9,7 @@ const Hero = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-              Tax Returns Made <span className="gradient-text">Simple</span> With AI Assistance
+			<span className="gradient-text">Tax Returns Made Simple With AI Assistance</span>
             </h1>
             <p className="text-lg text-gray-600 md:pr-12">
               Our AI-powered platform guides you through your tax return, maximizing deductions and ensuring compliance with the latest tax laws.

@@ -1,7 +1,13 @@
-
-import { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Menu, X } from 'lucide-react';
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,20 +18,50 @@ const Navbar = () => {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <a href="/" className="flex items-center">
-              <span className="text-2xl font-display font-bold text-taxblue-600">Tax<span className="text-taxgreen-500">AI</span></span>
+              <span className="text-2xl font-display font-bold text-taxblue-600">
+                IT<span className="text-taxgreen-500">Yaar</span>
+              </span>
             </a>
           </div>
-          
+
           {/* Desktop navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#features" className="text-gray-700 hover:text-taxblue-500 transition-colors">Features</a>
-            <a href="#how-it-works" className="text-gray-700 hover:text-taxblue-500 transition-colors">How It Works</a>
-            <a href="#pricing" className="text-gray-700 hover:text-taxblue-500 transition-colors">Pricing</a>
-            <a href="#faq" className="text-gray-700 hover:text-taxblue-500 transition-colors">FAQ</a>
-            <Button variant="outline" className="border-taxblue-500 text-taxblue-500 hover:bg-taxblue-50">Log In</Button>
-            <Button className="bg-taxblue-500 hover:bg-taxblue-600">Get Started</Button>
+            <DropdownMenu>
+              <DropdownMenuTrigger className="text-gray-700 hover:text-taxblue-500 transition-colors">
+                Learn ▼
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="start">
+                <DropdownMenuItem>
+                  <Link to="/tinder" className="w-full block">
+                    Tinder
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  <Link to="/reels" className="w-full block">
+                    Reels
+                  </Link>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+
+            <Link
+              to="/voice"
+              className="text-gray-700 hover:text-taxblue-500 transition-colors"
+            >
+              Voice UI
+            </Link>
+           
+            {/* <Button
+              variant="outline"
+              className="border-taxblue-500 text-taxblue-500 hover:bg-taxblue-50"
+            >
+              Log In
+            </Button> */}
+            <Button className="bg-taxblue-500 hover:bg-taxblue-600">
+              Get Started
+            </Button>
           </div>
-          
+
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center">
             <button
@@ -37,18 +73,45 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      
+
       {/* Mobile menu */}
       {isMenuOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white shadow-lg rounded-b-lg">
-            <a href="#features" className="block px-3 py-2 text-gray-700 hover:bg-taxblue-50 rounded-md">Features</a>
-            <a href="#how-it-works" className="block px-3 py-2 text-gray-700 hover:bg-taxblue-50 rounded-md">How It Works</a>
-            <a href="#pricing" className="block px-3 py-2 text-gray-700 hover:bg-taxblue-50 rounded-md">Pricing</a>
-            <a href="#faq" className="block px-3 py-2 text-gray-700 hover:bg-taxblue-50 rounded-md">FAQ</a>
+            <a
+              href="#features"
+              className="block px-3 py-2 text-gray-700 hover:bg-taxblue-50 rounded-md"
+            >
+              Features
+            </a>
+            <a
+              href="#how-it-works"
+              className="block px-3 py-2 text-gray-700 hover:bg-taxblue-50 rounded-md"
+            >
+              How It Works
+            </a>
+            <a
+              href="#pricing"
+              className="block px-3 py-2 text-gray-700 hover:bg-taxblue-50 rounded-md"
+            >
+              Pricing
+            </a>
+            <a
+              href="#faq"
+              className="block px-3 py-2 text-gray-700 hover:bg-taxblue-50 rounded-md"
+            >
+              FAQ
+            </a>
             <div className="flex flex-col space-y-2 px-3 py-2">
-              <Button variant="outline" className="border-taxblue-500 text-taxblue-500 hover:bg-taxblue-50 w-full">Log In</Button>
-              <Button className="bg-taxblue-500 hover:bg-taxblue-600 w-full">Get Started</Button>
+              <Button
+                variant="outline"
+                className="border-taxblue-500 text-taxblue-500 hover:bg-taxblue-50 w-full"
+              >
+                Log In
+              </Button>
+              <Button className="bg-taxblue-500 hover:bg-taxblue-600 w-full">
+                Get Started
+              </Button>
             </div>
           </div>
         </div>
